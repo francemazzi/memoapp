@@ -28,17 +28,12 @@
   outline: 0;
   background-color: #f5f5f5;
 }
-
-@media only screen and (max-width: 600px) {
-  .inputTesto > span {
-    font-size: 30px;
-  }
-  .inputTesto input[type="text"] {
-    font-size: 15px;
-    width: 15rem;
-  }
+.btnContainerMemoForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-
 #submit {
   margin: 10px;
   outline: none;
@@ -56,4 +51,14 @@
 #submit:hover {
   background-color: #b6b9bd;
   box-shadow: 0 0 0 0.2rem rgba(172, 173, 174, 0.5);
+}
+
+@media only screen and (max-width: 600px) {
+  .inputTesto > span {
+    font-size: 30px;
+  }
+  .inputTesto input[type="text"] {
+    font-size: 15px;
+    width: 15rem;
+  }
 }

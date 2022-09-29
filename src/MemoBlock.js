@@ -1,9 +1,18 @@
-const MemoBlock = ({ memoblock, handleDelete }) => {
+const MemoBlock = ({ memoblock, handleClickLocal }) => {
   return (
     <div className="testoPromemoria">
-      <p>{memoblock}</p>
+      <p>{memoblock.memo}</p>
       <span>
-        <button onClick={() => handleDelete(memoblock.id)}>❌</button>
+        <button
+          id={memoblock.id}
+          key={memoblock.id}
+          memoblock={memoblock}
+          value={memoblock.id}
+          onClick={handleClickLocal}
+          className={memoblock.complete ? "memoblock completed" : "memoblock"}
+        >
+          ❌
+        </button>
       </span>
     </div>
   );

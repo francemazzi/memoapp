@@ -1,5 +1,5 @@
 import "./memoBlock.css";
-import { useState } from "react";
+import { memo, useState } from "react";
 import MemoBlock from "./MemoBlock.js";
 
 const MemoBlockList = ({ memoblocks }) => {
@@ -15,17 +15,18 @@ const MemoBlockList = ({ memoblocks }) => {
   //       });
   //   }, []);
 
-  // const handleDelete = (id) => {
-  //   const newBlock = memoblocks.filter((memoblock) => memoblock.id !== id);
-  //   setMemoblock(newBlock);
-  //   console.log("a");
-  // };
-
   return (
     <div>
-      {/* mettere come key={memoblock.id} */}
       {memoblocks.map((memoblock, index) => (
-        <MemoBlock memoblock={memoblock} key={index}></MemoBlock>
+        <MemoBlock
+          memoblock={memoblock}
+          key={memoblock.id}
+          id={memoblock.id}
+          value={memoblock.id}
+          className={memoblock.complete ? "memoblock completed" : "memoblock"}
+        >
+          {memoblock.memo}
+        </MemoBlock>
       ))}
     </div>
   );

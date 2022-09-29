@@ -5,13 +5,13 @@ const MemoForm = ({ addMemo }) => {
   const [memo, setMemo] = useState("");
 
   const handleInputText = (e) => {
-    setMemo(e.target.value);
+    setMemo(e.currentTarget.value);
   };
 
   const addNewMemo = (e) => {
     e.preventDefault();
     addMemo(memo);
-    console.log("a");
+    setMemo("");
   };
 
   return (
@@ -23,11 +23,13 @@ const MemoForm = ({ addMemo }) => {
             type="text"
             placeholder="Inserisci il promemoria qui.. "
             className="search"
+            id="memo"
+            value={memo}
             onChange={handleInputText}
           />
         </div>
       </div>
-      <div>
+      <div className="btnContainerMemoForm">
         <button id="submit" type="submit">
           Aggiungi
         </button>
