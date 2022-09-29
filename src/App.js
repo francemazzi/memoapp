@@ -1,19 +1,21 @@
 import "./App.css";
-import BtnAdd from "./Btn.js";
-import InputMemo from "./Input.js";
+import MemoForm from "./MemoForm.js";
+import { useState } from "react";
+import MemoBlockList from "./MemoBlockList.js";
 
 function App() {
+  const [memoblocks, setMemoblocks] = useState([]);
+  const addMemo = (memo) => {
+    let newMemoBlock = [...memoblocks];
+    newMemoBlock.push(memo);
+    setMemoblocks(newMemoBlock);
+  };
   return (
-    <div class="container">
-      <div class="containerLista">
-        <div class="titolo">Lista della spesa</div>
-        <InputMemo></InputMemo>
-        <div>
-          <BtnAdd>Aggiungi</BtnAdd>
-        </div>
-        <div class="titolo2">Aggiungi qualcosa e clicca sul bottone</div>
-
-        <div class="promemoria"></div>
+    <div className="container">
+      <div className="containerLista">
+        <div className="titolo">Lista della spesa</div>
+        <MemoForm addMemo={addMemo}></MemoForm>
+        <MemoBlockList memoblocks={memoblocks}></MemoBlockList>
       </div>
     </div>
   );

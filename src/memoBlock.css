@@ -1,0 +1,33 @@
+.promemoria {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.testoPromemoria {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+  border-radius: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  box-shadow: 5px 5px 15px 5px #625d5d31;
+}
+.testoPromemoria:hover {
+  box-shadow: 5px 5px 15px 5px #625d5d3f;
+}
+.testoPromemoria > span button {
+  outline: none;
+  text-align: center;
+  appearance: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: white;
+  margin-left: 10px;
+}
