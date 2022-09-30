@@ -21,7 +21,9 @@
   /* background: white url(img/search.png) no-repeat 2px 13.5px; */
   box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
 }
-
+ input, textarea {
+   font-size:16px;
+} 
 .search {
   height: 25px;
   padding: 2px 23px 2px 30px;
