@@ -1,20 +1,8 @@
 import "./memoBlock.css";
-import { memo, useState } from "react";
+import { useState } from "react";
 import MemoBlock from "./MemoBlock.js";
 
-const MemoBlockList = ({ memoblocks }) => {
-  //Prova useEffect: per chiamare terminale
-  //npx json-server --watch data/db.json --port 8000
-  //   useEffect(() => {
-  //     fetch("http://localhost:8000/memoriaBlock")
-  //       .then((res) => {
-  //         return res.json();
-  //       })
-  //       .then((data) => {
-  //         console.log(data);
-  //       });
-  //   }, []);
-
+const MemoBlockList = ({ memoblocks, handleClick }) => {
   return (
     <div>
       {memoblocks.map((memoblock, index) => (
@@ -23,6 +11,7 @@ const MemoBlockList = ({ memoblocks }) => {
           key={memoblock.id}
           id={memoblock.id}
           value={memoblock.id}
+          handleClick={handleClick}
           className={memoblock.complete ? "memoblock completed" : "memoblock"}
         >
           {memoblock.memo}

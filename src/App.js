@@ -17,6 +17,7 @@ function App() {
   };
 
   const handleClickLocal = (e) => {
+    console.log(e.currentTarget.id);
     handleClick(e.currentTarget.id);
   };
 
