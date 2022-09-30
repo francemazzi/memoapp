@@ -1,6 +1,12 @@
 const MemoBlock = ({ memoblock, handleClickLocal }) => {
   return (
-    <div className="testoPromemoria">
+    <div
+      className={
+        memoblock.complete
+          ? "testoPromemoria memoblock completed"
+          : "testoPromemoria memoblock"
+      }
+    >
       <p>{memoblock.memo}</p>
       <span>
         <button
@@ -8,8 +14,7 @@ const MemoBlock = ({ memoblock, handleClickLocal }) => {
           key={memoblock.id}
           memoblock={memoblock}
           value={memoblock.id}
-          onClick={handleClickLocal}
-          className={memoblock.complete ? "memoblock completed" : "memoblock"}
+          onClick={(e) => handleClickLocal(memoblock.id, e)}
         >
           ❌
         </button>

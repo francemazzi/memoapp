@@ -6,19 +6,14 @@ import MemoBlockList from "./MemoBlockList.js";
 function App() {
   const [memoblocks, setMemoblocks] = useState([]);
 
-  const handleClick = (id) => {
+  const handleClickLocal = (id) => {
     let newMemoBlock = memoblocks.map((block) => {
       return block.id === parseInt(id)
         ? { ...block, complete: !block.complete }
         : { ...block };
     });
-
+    console.log(id);
     setMemoblocks(newMemoBlock);
-  };
-
-  const handleClickLocal = (e) => {
-    console.log(e.currentTarget.id);
-    handleClick(e.currentTarget.id);
   };
 
   const addMemo = (memo) => {
@@ -40,7 +35,7 @@ function App() {
         <MemoForm addMemo={addMemo}></MemoForm>
         <MemoBlockList
           memoblocks={memoblocks}
-          handleClick={handleClick}
+          // handleClick={handleClick}
           handleClickLocal={handleClickLocal}
         ></MemoBlockList>
       </div>

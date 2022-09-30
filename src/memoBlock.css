@@ -28,8 +28,8 @@
   border: none;
   text-decoration: none;
   cursor: pointer;
-  background-color: white;
   margin-left: 10px;
+  background-color: transparent;
 }
 .completed {
   background-color: rgb(240, 105, 105);

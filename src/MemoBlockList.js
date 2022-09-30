@@ -2,7 +2,7 @@ import "./memoBlock.css";
 import { useState } from "react";
 import MemoBlock from "./MemoBlock.js";
 
-const MemoBlockList = ({ memoblocks, handleClick }) => {
+const MemoBlockList = ({ memoblocks, handleClickLocal }) => {
   return (
     <div>
       {memoblocks.map((memoblock, index) => (
@@ -11,7 +11,7 @@ const MemoBlockList = ({ memoblocks, handleClick }) => {
           key={memoblock.id}
           id={memoblock.id}
           value={memoblock.id}
-          handleClick={handleClick}
+          handleClickLocal={handleClickLocal}
           className={memoblock.complete ? "memoblock completed" : "memoblock"}
         >
           {memoblock.memo}
