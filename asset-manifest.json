@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/memoapp/static/css/main.b35b331f.css",
+    "main.js": "/memoapp/static/js/main.449f39b3.js",
+    "index.html": "/memoapp/index.html",
+    "main.b35b331f.css.map": "/memoapp/static/css/main.b35b331f.css.map",
+    "main.449f39b3.js.map": "/memoapp/static/js/main.449f39b3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b35b331f.css",
+    "static/js/main.449f39b3.js"
+  ]
+}
